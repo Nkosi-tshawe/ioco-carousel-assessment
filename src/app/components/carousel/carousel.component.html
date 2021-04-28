@@ -1,0 +1,40 @@
+<div class="lc-wrapper">
+  <div class="lc-title">
+    <ng-content></ng-content>
+  </div>
+  <ngx-slick-carousel
+    class="carousel"
+    #slickModal="slick-carousel"
+    [config]="config"
+  >
+    <div ngxSlickItem *ngFor="let slide of slideItems" class="slide">
+      <div class="lc__slide">
+        <img class="lc__slide-img" [src]="slide.rc" />
+        <div class="lc__slide-title">
+          <h3>{{ slide.title }}</h3>
+        </div>
+        <a
+          [owlRouterLink]="['/present']"
+          [stopLink]="isDragging"
+          class="lc__slide-link"
+          >Start here</a
+        >
+      </div>
+    </div>
+  </ngx-slick-carousel>
+
+  <div class="lc-actions">
+    <button
+      class="lc-action-prev swiper-navigation-prev"
+      (click)="slickModal.slickPrev()"
+    >
+      <img src="assets/images/arrow_back.svg" />
+    </button>
+    <button
+      class="lc-action-next swiper-navigation-next"
+      (click)="slickModal.slickNext()"
+    >
+      <img src="/assets/images/arrow_forward.svg" />
+    </button>
+  </div>
+</div>

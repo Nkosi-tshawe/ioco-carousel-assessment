@@ -1,0 +1,59 @@
+/*------ BOOTSTRAP OVERRIDES ---------*/
+.container {
+  max-width: 1092px;
+}
+
+.lc-wrapper {
+  height: auto !important;
+  .slick-track {
+    align-items: center;
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    min-height: 422px;
+
+    .slick-slide {
+      display: flex;
+      width: 162px;
+      margin-right: 18px;
+      .lc__slide {
+        flex: 1 0 auto;
+        transition: all 0.2s ease-in-out;
+      }
+      &.slick-current {
+        width: initial;
+        .lc__slide {
+          border-bottom: 5px solid $yellow;
+          padding: 51px 80px !important;
+          flex: 1 0 auto;
+        }
+
+        .lc__slide-img {
+          width: 120px !important;
+          height: 120px !important;
+          margin-bottom: 71px;
+        }
+
+        .lc__slide-link {
+          display: block;
+          color: $dark-grey;
+          text-transform: uppercase;
+        }
+
+        .lc__slide-title {
+          margin-bottom: 51px;
+          h3 {
+            font-weight: 600 !important;
+            transform: scale(1.5);
+          }
+        }
+
+        .lc__slide-link {
+          display: block !important;
+          transition: 0.3s;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
