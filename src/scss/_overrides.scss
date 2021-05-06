@@ -29,7 +29,7 @@
       }
       &.slick-current {
         width: 100%;
-        max-width: 380px;
+        max-width: 360px;
         min-height: 564px;
         max-height: 564px;
         .lc__slide {
@@ -82,5 +82,10 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: "1200px") {
+  .container {
   }
 }

@@ -33,7 +33,7 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
       {
         breakpoint: 768,
         settings: {
-          arrows: true,
+          arrows: false,
           centerMode: true,
           centerPadding: '40px',
           adaptiveHeight: false,
@@ -43,7 +43,7 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
       {
         breakpoint: 999,
         settings: {
-          arrows: true,
+          arrows: false,
           centerMode: true,
           centerPadding: '40px',
           adaptiveHeight: false,
@@ -53,7 +53,7 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
       {
         breakpoint: 1024,
         settings: {
-          arrows: true,
+          arrows: false,
           centerMode: true,
           centerPadding: '40px',
           adaptiveHeight: false,
