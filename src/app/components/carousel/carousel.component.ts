@@ -24,7 +24,7 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
 
   config = {
     slidesToShow: 1,
-    arrows: true,
+    arrows: false,
     centerMode: true,
     variableWidth: true,
     adaptiveHeight: false,

@@ -29,7 +29,7 @@
       }
       &.slick-current {
         width: 100%;
-        max-width: 456px;
+        max-width: 380px;
         min-height: 564px;
         max-height: 564px;
         .lc__slide {
@@ -67,6 +67,18 @@
           display: block !important;
           transition: 0.3s;
           font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: "426px") {
+  .lc-wrapper {
+    .slick-track {
+      .slick-slide {
+        &.slick-current {
+          max-width: 456px;
         }
       }
     }

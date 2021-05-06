@@ -41,7 +41,7 @@
       margin-left: 5%;
     }
     .lc-action-next {
-      margin-left: 78%;
+      margin-left: 71%;
     }
   }
 
@@ -152,6 +152,16 @@
   }
 }
 
+@media screen and (min-width: "768px") {
+  .lc-wrapper {
+    .lc-actions {
+      .lc-action-next {
+        margin-left: 76%;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: "899px") {
   .lc-wrapper {
     .lc-title {
@@ -159,14 +169,10 @@
       text-align: left;
       padding-left: 40px;
     }
-  }
-}
 
-@media screen and (min-width: "768px") {
-  .lc-wrapper {
     .lc-actions {
       .lc-action-prev {
-        margin-left: 14%;
+        margin-left: 13%;
       }
       .lc-action-next {
         margin-left: 67%;
