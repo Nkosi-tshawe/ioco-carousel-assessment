@@ -1,6 +1,10 @@
 /*------ BOOTSTRAP OVERRIDES ---------*/
 .container {
-  max-width: 1092px;
+  max-width: 1440px;
+  &.main-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .lc-wrapper {
@@ -10,28 +14,36 @@
     display: flex;
     padding-top: 15px;
     padding-bottom: 15px;
-    min-height: 422px;
+    min-height: 588px;
+    transition: 0.3s;
 
     .slick-slide {
       display: flex;
-      width: 162px;
-      margin-right: 18px;
+      margin-right: 24px;
+      min-height: 284px;
+      min-width: 216px;
+      transform-origin: center;
       .lc__slide {
         flex: 1 0 auto;
         transition: all 0.2s ease-in-out;
       }
       &.slick-current {
-        width: initial;
+        width: 100%;
+        max-width: 456px;
+        min-height: 564px;
+        max-height: 564px;
         .lc__slide {
-          border-bottom: 5px solid $yellow;
-          padding: 51px 80px !important;
+          border-bottom: 8px solid $yellow;
+          padding-left: 51px !important;
+          padding-right: 51px !important;
+          justify-content: space-evenly;
           flex: 1 0 auto;
         }
 
         .lc__slide-img {
           width: 120px !important;
           height: 120px !important;
-          margin-bottom: 71px;
+          margin-bottom: 71px !important;
         }
 
         .lc__slide-link {
@@ -42,9 +54,12 @@
 
         .lc__slide-title {
           margin-bottom: 51px;
+
           h3 {
             font-weight: 600 !important;
-            transform: scale(1.5);
+            font-size: 40px !important;
+            line-height: 58px !important;
+            max-width: 250px !important;
           }
         }
 

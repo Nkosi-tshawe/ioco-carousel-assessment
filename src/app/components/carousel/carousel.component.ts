@@ -17,7 +17,6 @@ import {
 export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private el: ElementRef) {}
 
-  // activeSlides: SlidesOutputData;
   activeSlide;
   currentSlide: number = 1;
   indexNumber = 1;
@@ -27,7 +26,6 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
     slidesToShow: 1,
     arrows: true,
     centerMode: true,
-    centerPadding: '40px',
     variableWidth: true,
     adaptiveHeight: false,
     infinite: true,
