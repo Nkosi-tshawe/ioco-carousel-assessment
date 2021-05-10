@@ -2,37 +2,35 @@
   <div class="lc-title">
     <ng-content></ng-content>
   </div>
-  <ngx-slick-carousel
-    class="carousel"
-    #slickModal="slick-carousel"
-    [config]="config"
-  >
-    <div ngxSlickItem *ngFor="let slide of slideItems" class="slide">
-      <div class="lc__slide">
-        <picture class="lc__slide-img" [src]=""></picture>
-        <div class="lc__slide-title">
-          <h3>{{ slide.title }}</h3>
+  <div slickContainer #slickController="slick" [slickConfig]="config">
+    <ng-container *ngIf="slickController.initialize">
+      <div slickItem *ngFor="let slide of slideItems" class="slide">
+        <div class="lc__slide">
+          <picture class="lc__slide-img" [src]=""></picture>
+          <div class="lc__slide-title">
+            <h3>{{ slide.title }}</h3>
+          </div>
+          <a
+            [owlRouterLink]="['/present']"
+            [stopLink]="isDragging"
+            class="lc__slide-link"
+            >Start here</a
+          >
         </div>
-        <a
-          [owlRouterLink]="['/present']"
-          [stopLink]="isDragging"
-          class="lc__slide-link"
-          >Start here</a
-        >
       </div>
-    </div>
-  </ngx-slick-carousel>
+    </ng-container>
+  </div>
 
   <div class="lc-actions">
     <button
       class="lc-action-prev swiper-navigation-prev"
-      (click)="slickModal.slickPrev()"
+      (click)="slickController.prev()"
     >
       <img src="assets/images/arrow_back.svg" />
     </button>
     <button
       class="lc-action-next swiper-navigation-next"
-      (click)="slickModal.slickNext()"
+      (click)="slickController.next()"
     >
       <img src="/assets/images/arrow_forward.svg" />
     </button>
