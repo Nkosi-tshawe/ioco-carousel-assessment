@@ -7,13 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Custom Modules
-import { AppRoutingModule } from 'src/app/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 
 // Custom Components
-import { AppComponent } from 'src/app/app.component';
-import { CarouselComponent } from 'src/app/components/carousel/carousel.component';
-import { HeaderComponent } from 'src/app/components/header/header.component';
-import { HomeComponent } from 'src/app/pages/home/home.component';
+import { AppComponent } from './app.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './pages/home/home.component';
 
 // Carousel
 import { SlickCarouselModule } from 'ngx-slick-carousel';
