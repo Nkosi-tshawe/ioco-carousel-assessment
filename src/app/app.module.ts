@@ -11,18 +11,18 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Custom Components
 import { AppComponent } from './app.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
+// import { CarouselComponent } from './components/carousel/carousel.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 
 // Carousel
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import {  NgxSlickJsModule } from 'ngx-slickjs'
+import { LightCarouselModule } from '@tagron/light-carousel';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarouselComponent,
+    // CarouselComponent,
     HeaderComponent,
     HomeComponent,
   ],
@@ -31,7 +31,8 @@ import {  NgxSlickJsModule } from 'ngx-slickjs'
     BrowserModule,
     BrowserAnimationsModule,
     NgbModule,
-    SlickCarouselModule,
+    // SlickCarouselModule,
+    LightCarouselModule,
     NgxSlickJsModule.forRoot({
       links: {
         jquery: "https://code.jquery.com/jquery-3.4.0.min.js",

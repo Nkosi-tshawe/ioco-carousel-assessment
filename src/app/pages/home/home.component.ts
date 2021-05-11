@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Slick } from 'ngx-slickjs';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,50 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   constructor() {}
   slideItems;
+  config:Slick.Config;
 
   ngOnInit(): void {
+
+    this.config = {
+      slidesToShow: 1,
+      arrows: false,
+      centerMode: true,
+      variableWidth: true,
+      adaptiveHeight: false,
+      infinite: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            adaptiveHeight: false,
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 999,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            adaptiveHeight: false,
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            adaptiveHeight: false,
+            slidesToShow: 5,
+          },
+        },
+      ],
+    };
     this.slideItems = [
       {
         id: 1,
