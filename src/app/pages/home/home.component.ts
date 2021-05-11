@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
             centerMode: true,
             centerPadding: '40px',
             adaptiveHeight: false,
-            slidesToShow: 1,
+            slidesToShow: 3,
           },
         },
         {
