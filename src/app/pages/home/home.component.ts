@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Slick } from 'ngx-slickjs';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,50 +7,8 @@ import { Slick } from 'ngx-slickjs';
 export class HomeComponent implements OnInit {
   constructor() {}
   slideItems;
-  config:Slick.Config;
 
   ngOnInit(): void {
-
-    this.config = {
-      slidesToShow: 1,
-      arrows: false,
-      centerMode: true,
-      variableWidth: true,
-      adaptiveHeight: false,
-      infinite: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: true,
-            centerMode: true,
-            centerPadding: '40px',
-            adaptiveHeight: false,
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 999,
-          settings: {
-            arrows: true,
-            centerMode: true,
-            centerPadding: '40px',
-            adaptiveHeight: false,
-            slidesToShow: 3,
-          },
-        },
-        {
-          breakpoint: 1024,
-          settings: {
-            arrows: true,
-            centerMode: true,
-            centerPadding: '40px',
-            adaptiveHeight: false,
-            slidesToShow: 5,
-          },
-        },
-      ],
-    };
     this.slideItems = [
       {
         id: 1,
@@ -65,28 +21,28 @@ export class HomeComponent implements OnInit {
         src: 'https://via.placeholder.com/600',
         alt: 'Home Internet',
         title: 'Home Internet',
-        width: '162',
+        url: '#',
       },
       {
         id: 3,
         src: 'https://via.placeholder.com/600',
         alt: 'Get a device',
         title: 'Get a device',
-        width: '162',
+        url: '//#region ',
       },
       {
         id: 4,
         src: 'https://via.placeholder.com/600',
         alt: 'Add a phone-line',
         title: 'Add a phone-line',
-        width: '162',
+        url: '#',
       },
       {
         id: 5,
         src: 'https://via.placeholder.com/600',
         alt: 'Upgrade',
         title: 'Upgrade',
-        width: '162',
+        url: '#',
       },
     ];
   }
